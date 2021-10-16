@@ -14,5 +14,5 @@ Our goals are:
 
 ## Contributers
 
-[captain0potlid](https://github.com/captain0potlid)
-[Lucas Han (evannilaz)](https://github.com/evannilaz)
+- [captain0potlid](https://github.com/captain0potlid)
+- [Lucas Han (evannilaz)](https://github.com/evannilaz)
