@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title header A001</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="user-container">
+            <label for="nickname">James Chuckman</label>
+            대화명 : <input type="text" id="nickname" placeholder="James Chuckman">
+        </div>
+        <div class="display-container">
+            <ul class="chatting-list" id="0164">
+                <li class="notice">
+                    <span style="font-size: 1rem;" class="time">오후 2:20</span><br>
+                    <span class="alertmessage">James Chuckman 님이 채팅방에 입장하셨습니다.</span>
+                </li>
+            </ul>
+        </div>
+        <div class="input-container">
+            <input type="text" class="chatting-input">
+            <button class="send-button">전송</button>
+        </div>
+        
+    
+    </div>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+
+</html>

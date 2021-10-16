@@ -1,0 +1,59 @@
+
+html, body {
+    height: 100%;
+}
+.wrapper {
+    height: 100%;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    overflow:hidden;
+}
+.user-container {
+    background: #a9bdce;
+    flex:1;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.5rem;
+}
+.user-container label {
+    font-size: 16px;
+    margin-right: 1rem;
+}
+.user-container.input {
+    border-radius:3px;
+    border:none;
+    height:100%;
+}
+.display-container {
+    flex:12;
+    background: #b2c7d9;
+}
+.input-container {
+    flex:2;
+}
+
+/* notice 는 공지 클래스(시간 공지) */
+.notice {
+    content:attr(data-date-str);
+    display:block;
+    background-color:rgba(0,0,0,0.15);
+    border-radius:1rem;
+    text-align:center;
+    padding:0.3rem 0;
+    color:white;
+    font-size:1.3rem;
+}
+
+/* chat 은 일반 유저 클래스 */
+.chat {
+    content:attr(data-date-str);
+    display:block;
+    background-color:rgb(255, 251, 0);
+    border-radius:1rem;
+    text-align:center;
+    padding:0.3rem 0;
+    color:rgb(0, 0, 0);
+    font-size:1.3rem;
+}
