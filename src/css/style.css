@@ -1,59 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://rsms.me/inter/inter.css');
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
+* {
+    font-family: -apple-system, BlinkMacSystemFont, Inter, Noto Sans JP, Noto Sans KR, sans-serif !important;
+    box-sizing: border-box !important;
+}
 
 html, body {
     height: 100%;
-}
-.wrapper {
-    height: 100%;
-    width:100%;
-    display:flex;
-    flex-direction: column;
-    overflow:hidden;
-}
-.user-container {
-    background: #a9bdce;
-    flex:1;
-    display:flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0.5rem;
-}
-.user-container label {
-    font-size: 16px;
-    margin-right: 1rem;
-}
-.user-container.input {
-    border-radius:3px;
-    border:none;
-    height:100%;
-}
-.display-container {
-    flex:12;
-    background: #b2c7d9;
-}
-.input-container {
-    flex:2;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
-/* notice 는 공지 클래스(시간 공지) */
-.notice {
-    content:attr(data-date-str);
-    display:block;
-    background-color:rgba(0,0,0,0.15);
-    border-radius:1rem;
-    text-align:center;
-    padding:0.3rem 0;
-    color:white;
-    font-size:1.3rem;
+nav {
+    box-shadow: 0 5px 10px var(--accent-bxsh);
+    height: 12.5%;
 }
 
-/* chat 은 일반 유저 클래스 */
-.chat {
-    content:attr(data-date-str);
-    display:block;
-    background-color:rgb(255, 251, 0);
-    border-radius:1rem;
-    text-align:center;
-    padding:0.3rem 0;
-    color:rgb(0, 0, 0);
-    font-size:1.3rem;
+main {
+    display: flex;
+    flex-direction: row;
+    height: 87.5%;
+    margin: 30px;
+    border: 1px solid var(--accent-bxsh);
+    border-radius: 12.5px;
+}
+
+main > div {
+    overflow-y: scroll;
+}
+
+main > #sessions {
+    width: 40%;
+    border-right: 1px solid var(--accent-bxsh)
+}
+
+main > #chat {
+    width: 60%;
+}
+
+.chat-outter {
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.chat-outter.fromserver {
+    display: flex;
+
+}
+
+.chat-inner {
+    max-width: 70%;
+    background: var(--accent);
+    border-radius: 20px;
+    box-shadow: 0 0 7.5px  var(--accent-trnp);
+    padding: 12.5px 20px 12.5px 20px;
+    /* text-align: center; */
 }
