@@ -5,8 +5,13 @@
 }
 
 * {
-    font-family: -apple-system, BlinkMacSystemFont, Inter, Noto Sans JP, Noto Sans KR, sans-serif !important;
-    box-sizing: border-box !important;
+    font-family: -apple-system, BlinkMacSystemFont, Inter, Noto Sans JP, Noto Sans KR, sans-serif;
+    box-sizing: border-box;
+    outline: none;
+}
+
+i {
+    font-family: Fontawesome;
 }
 
 html, body {
@@ -18,55 +23,111 @@ html, body {
 }
 
 nav {
-    box-shadow: 0 5px 10px var(--accent-bxsh);
-    height: 12.5%;
+    height: 8.5%;
 }
 
 main {
     display: flex;
     flex-direction: row;
     height: 87.5%;
-    margin: 30px;
-    border: 1px solid var(--accent-bxsh);
+    margin: 15px 25px 15px 25px;
+    border: 1px solid gray;
     border-radius: 12.5px;
 }
 
-main > div {
+main .scrollable {
     overflow-y: scroll;
 }
 
-main > #sessions {
+main > #people {
     width: 40%;
-    border-right: 1px solid var(--accent-bxsh)
+    border-right: 1px solid gray;
 }
 
 main > #chat {
+    display: flex;
+    flex-direction: column;
     width: 60%;
 }
 
-.chat-outter {
-    margin-top: 30px;
+#chat > #bubbles > .bubble-outter {
     padding: 10px;
 }
 
-.chat-inner {
-    max-width: 70%;
-    border-radius: 20px;
-    padding: 12.5px 20px 12.5px 20px;
-}
-
-.chat-outter.self {
+#chat > #bubbles > .bubble-outter.self {
     display: flex;
     align-items: flex-end;
 }
 
-.chat-outter.self > .chat-inner {
-    margin-left: auto;
-    background: var(--accent);
-    box-shadow: 0 0 7.5px var(--accent-trnp);
+#chat > #bubbles > .bubble-outter > .bubble-inner {
+    display: inline-block;
+    max-width: 70%;
+    padding: 12.5px 20px 12.5px 20px;
+    user-select: none;
 }
 
-.chat-outter.server > .chat-inner {
+#chat > #bubbles > .bubble-outter.self > .bubble-inner {
+    color: white;
+    margin-left: auto;
+    background: var(--accent);
+    box-shadow: 0 0 8.5px var(--accent-trnp);
+    border-radius: 22.5px 5px 22.5px 22.5px;
+}
+
+#chat > #bubbles > .bubble-outter.server > .bubble-inner {
     background: var(--accent-bg);
-    box-shadow: 0 0 7.5px var(--accent-bxsh);
+    box-shadow: 0 0 8.5px var(--accent-sh);
+    border-radius: 5px 22.5px 22.5px 22.5px;
+}
+
+#chat > #input-outter {
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    justify-self: end;
+    height: 45px;
+    padding: 15px;
+    background: transparent;
+}
+
+#chat > #input-outter > #input-inner {
+    display: flex;
+    align-items: center;
+    background: var(--accent-bg);
+    border: 1.5px solid var(--accent);
+    box-shadow: 0 2px 12px var(--accent-ex-trnp);
+    padding: 5px;
+    width: 80%;
+    height: 100%;
+    border-radius: 22px;
+}
+
+#chat > #input-outter > #input-inner > textarea, button {
+    height: 100%;
+    border: none;
+}
+
+#chat > #input-outter > #input-inner > textarea {
+    display: block;
+    resize: none;
+    background: none;
+    border: none;
+    padding: 0;
+    width: 90%;
+    justify-self: start;
+}
+
+#chat > #input-outter > #input-inner > button {
+    display: block;
+    background: var(--accent);
+    box-shadow: 0 0 8.5px var(--accent-ex-trnp);
+    width: 31px;
+    height: 31px;
+    margin-left: auto;
+    justify-self: end;
+    border-radius: 15.5px;
+    color: white;
 }

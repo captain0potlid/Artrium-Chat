@@ -1,20 +1,17 @@
 const socket = io();
-
+const chat = document.querySelector('#chat');
 const sendBtn = document.querySelector('.send-button');
 
-function addBubble(content) {
-    const bubble = document.createElement('div');
-}
-
 sendBtn.addEventListener('click', () => {
-    const prmtr = {
-        sender: '',
-        msg: ''
-    }
+    const data = { sender: 'sender', receiver: '', msg: '' }
 
-    socket.emit('chat', prmtr);
+    socket.emit('chat', data);
 });
 
 socket.on('chat', (data) => {
-    document.querySelector('#')
-})
+    const bubble = document.createElement('div');
+    bubble.classList.add('chat-outter');
+    bubble.classList.add('self');
+    bubble.innerHTML = `<div class='chat-inner'>${data.msg}</div>`;
+    chat.appendChild(bubble);
+});

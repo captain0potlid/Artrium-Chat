@@ -1,9 +1,8 @@
 :root {
-    --accent: #10ac84;
-    --accent-drk: #0aa078;
+    --accent: #19b991;
     --accent-trnp: #10ac8480;
-    --accent-extra-trnp: #10ac8433;
-    --accent-bxsh: #0000004d;
+    --accent-ex-trnp: #10ad8633;
+    --accent-sh: #80808039;
 
     --input-details-bg: #000000b3;
     --input-open-border: #757575;
