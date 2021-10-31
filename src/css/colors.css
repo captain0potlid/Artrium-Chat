@@ -1,26 +1,9 @@
 :root {
-    --accent: #19b991;
-    --accent-trnp: #10ac8480;
-    --accent-ex-trnp: #10ad8633;
-    --accent-sh: #80808039;
+    --accent: #0a84e1;
+    --accent-d: #006ee1;
+    
+    --white-g: #fafbfc;
 
-    --input-details-bg: #000000b3;
-    --input-open-border: #757575;
-    --input-open-label: #999;
-
-    --alert-scs-bg: #2ea44f99;
-    --alert-fal-bg: #cb243199;
-    --alert-scs-txt: #2ea44f;
-    --alert-fal-txt: #cb2431;
-}
-
-:root:-moz-lwtheme-darktext {
-    --accent-bg: #fafbfc;
-    --alert-bg: #ffffff99;
-}
-
-:root:-moz-lwtheme-brighttext {
-    --accent-bg: #201F1E;
-    --alert-bg: #00000099;
-    color: white;
+    --shadow-border-blk: inset #00000026 0 0 0 1px;
+    --shadow-border-acc: #0a84e199 0 0 3px 0;
 }

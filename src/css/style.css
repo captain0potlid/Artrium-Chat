@@ -29,29 +29,34 @@ nav {
 main {
     display: flex;
     flex-direction: row;
-    height: 87.5%;
-    margin: 15px 25px 15px 25px;
-    border: 1px solid gray;
-    border-radius: 12.5px;
+    height: 91.5%;
+    padding: 15px 25px 15px 25px;
 }
 
 main .scrollable {
     overflow-y: scroll;
 }
 
+main > #people, main > #chat {
+    border-radius: 20px;
+    box-shadow: var(--shadow-border-blk);
+}
+
 main > #people {
     width: 40%;
-    border-right: 1px solid gray;
+    margin-right: 15px;
 }
 
 main > #chat {
     display: flex;
     flex-direction: column;
     width: 60%;
+    padding: 15px;
+    background: var(--white-g);
 }
 
 #chat > #bubbles > .bubble-outter {
-    padding: 10px;
+    margin-bottom: 17.5px;
 }
 
 #chat > #bubbles > .bubble-outter.self {
@@ -63,6 +68,7 @@ main > #chat {
     display: inline-block;
     max-width: 70%;
     padding: 12.5px 20px 12.5px 20px;
+    border-radius: 20px;
     user-select: none;
 }
 
@@ -70,14 +76,12 @@ main > #chat {
     color: white;
     margin-left: auto;
     background: var(--accent);
-    box-shadow: 0 0 8.5px var(--accent-trnp);
-    border-radius: 22.5px 5px 22.5px 22.5px;
+    box-shadow: var(--shadow-border-acc);
 }
 
 #chat > #bubbles > .bubble-outter.server > .bubble-inner {
-    background: var(--accent-bg);
-    box-shadow: 0 0 8.5px var(--accent-sh);
-    border-radius: 5px 22.5px 22.5px 22.5px;
+    background: white;
+    box-shadow: var(--shadow-border-blk);
 }
 
 #chat > #input-outter {
@@ -96,16 +100,15 @@ main > #chat {
 #chat > #input-outter > #input-inner {
     display: flex;
     align-items: center;
-    background: var(--accent-bg);
-    border: 1.5px solid var(--accent);
-    box-shadow: 0 2px 12px var(--accent-ex-trnp);
+    background: white;
+    box-shadow: var(--shadow-border-blk);
     padding: 5px;
-    width: 80%;
+    width: 65%;
     height: 100%;
     border-radius: 22px;
 }
 
-#chat > #input-outter > #input-inner > textarea, button {
+#chat > #input-outter > #input-inner > textarea, #chat > #input-outter > #input-inner > button {
     height: 100%;
     border: none;
 }
@@ -122,12 +125,20 @@ main > #chat {
 
 #chat > #input-outter > #input-inner > button {
     display: block;
+    color: white;
     background: var(--accent);
-    box-shadow: 0 0 8.5px var(--accent-ex-trnp);
+    padding: 0;
     width: 31px;
     height: 31px;
     margin-left: auto;
     justify-self: end;
     border-radius: 15.5px;
-    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background .2s;
+}
+
+#chat > #input-outter > #input-inner > button:hover {
+    background: var(--accent-d);
+    transition: background .2s;
 }
