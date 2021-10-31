@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 8080;
 
 io.on("connection", (socket) => {
     socket.on("chatting", (data) => {
-        io.emit("chatting", data)
+        io.emit("chatting", data) // receive msg from server
     })
 });
 

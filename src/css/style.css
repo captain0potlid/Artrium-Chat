@@ -30,7 +30,7 @@ main {
     display: flex;
     flex-direction: row;
     height: 91.5%;
-    padding: 15px 25px 15px 25px;
+    padding: 15px 45px 15px 45px;
 }
 
 main .scrollable {
@@ -44,7 +44,8 @@ main > #people, main > #chat {
 
 main > #people {
     width: 40%;
-    margin-right: 15px;
+    border-radius: 20px 0 0 20px;
+    margin-right: -1px;
 }
 
 main > #chat {
@@ -53,6 +54,7 @@ main > #chat {
     width: 60%;
     padding: 15px;
     background: var(--white-g);
+    border-radius: 0 20px 20px 0;
 }
 
 #chat > #bubbles > .bubble-outter {
