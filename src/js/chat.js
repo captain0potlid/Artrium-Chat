@@ -1,5 +1,3 @@
-const e = require("express");
-
 const socket = io();
 
 const bubbles = document.querySelector('#chat > #bubbles');
