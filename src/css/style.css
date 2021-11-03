@@ -39,17 +39,19 @@ html, body {
     padding: 0;
 }
 
-nav, main {
+header, main {
+    display: flex;
+    flex-direction: row;
     padding: 15px 11% 15px 11%;
 }
 
-nav {
+header {
     height: 8.5%;
+    align-items: center;
+    user-select: none;
 }
 
 main {
-    display: flex;
-    flex-direction: row;
     width: 100%;
     height: 91.5%;
 }
@@ -74,6 +76,36 @@ main > #chat {
     background: var(--white-g);
     box-shadow: var(--shadow-border-blk);
     border-radius: 20px;
+}
+
+/* Header */
+
+header > #title {
+    font-weight: 800;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+header > #version {
+    font-weight: 300;
+    font-size: 18px;
+}
+
+header > a#signin {
+    margin-left: auto;
+    justify-self: flex-end;
+    background: var(--blu);
+    color: white;
+    padding: 10px 15px 10px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: var(--shadow-border-acc);
+    transition: background .2s;
+}
+
+header > a#signin:hover {
+    background: var(--blu-drk);
 }
 
 /* People */
@@ -157,7 +189,7 @@ main > #chat {
 #chat > #info > button.rm {
     justify-self: end;
     margin-left: auto;
-    color: #ff3b30;
+    color: var(--red);
 }
 
 #chat > #bubbles {
@@ -242,10 +274,9 @@ main > #chat {
     justify-self: end;
     border-radius: 15.5px;
     font-size: 16px;
-    transition: background .2s;
+    transition: background .15s;
 }
 
 #chat > #input-outter > #input-inner > button:hover {
-    background: #006ee1;
-    transition: background .2s;
+    background: var(--blu-drk);
 }

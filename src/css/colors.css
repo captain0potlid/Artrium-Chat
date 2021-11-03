@@ -3,8 +3,10 @@
 
     --shadow-border-blk: inset #00000026 0 0 0 1px;
     --shadow-border-gry: inset #eff3f4 0 0 0 1px;
-    --shadow-border-acc: #0a84e199 0 0 3px 0;
+    --shadow-border-acc: #007aff99 0 0 3px 0;
 
+    /* Colors from: https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/ */
+    
     --red: #ff3b30;
     --orn: #ff9500;
     --ylw: #ffcc00;
@@ -12,9 +14,11 @@
     --mnt: #00c7be;
     --tel: #30b0c7;
     --cyn: #32ade6;
-    --blu: #007aff;
+    --blu: rgb(0, 122, 255);
     --idg: #5856d6;
     --prp: #af52de;
     --pnk: #ff2d55;
     --bwn: #a2845e;
+
+    --blu-drk: #006ee1;
 }
