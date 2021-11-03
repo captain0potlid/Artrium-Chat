@@ -1,10 +1,4 @@
 :root {
-    --white-g: #fafbfc;
-
-    --shadow-border-blk: inset #00000026 0 0 0 1px;
-    --shadow-border-gry: inset #eff3f4 0 0 0 1px;
-    --shadow-border-acc: #007aff99 0 0 3px 0;
-
     /* Colors from: https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/ */
     
     --red: #ff3b30;
@@ -14,11 +8,50 @@
     --mnt: #00c7be;
     --tel: #30b0c7;
     --cyn: #32ade6;
-    --blu: rgb(0, 122, 255);
+    --blu: #007aff;
     --idg: #5856d6;
     --prp: #af52de;
     --pnk: #ff2d55;
     --bwn: #a2845e;
 
-    --blu-drk: #006ee1;
+    --blu-a: #006ee1;
+
+    --bg: #ffffff;
+    --bg-a: #fafbfc;
+    --bg-g: #ffffff;
+    --bg-i: #ffffff;
+
+    --txt-clr: #000000;
+
+    --border-a: #007aff99 0 0 3px 0;
+    --border-b: inset #00000026 0 0 0 1px;
+    --border-g: inset #eff3f4 0 0 0 1px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --red: #ff453a;
+        --orn: #ff9f0a;
+        --ylw: #ffd60a;
+        --grn: #30d158;
+        --mnt: #66d4cf;
+        --tel: #40c8e0;
+        --cyn: #64d2ff;
+        --blu: #0a84ff;
+        --idg: #5e5ce6;
+        --prp: #bf5af2;
+        --pnk: #ff375f;
+        --bwn: #ac8e68;
+
+        --bg: #000000;
+        --bg-a: #0e0e10;
+        --bg-g: #2c2c2e;
+        --bg-i: #1c1c1e;
+
+        --txt-clr: #ffffff;
+
+        --border-a: #0a84ff99 0 0 3px 0;
+        --border-b: inset #2c2c2e 0 0 0 1px;
+        --border-g: inset #1c1c1e 0 0 0 1px;
+    }
 }

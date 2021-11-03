@@ -11,6 +11,7 @@
     box-sizing: border-box;
     outline: none;
     overflow: hidden;
+    color: var(--txt-clr);
 }
 
 i {
@@ -37,6 +38,7 @@ html, body {
     width: 100%;
     margin: 0;
     padding: 0;
+    background: var(--bg);
 }
 
 header, main {
@@ -73,8 +75,8 @@ main > #chat {
     display: flex;
     flex-direction: column;
     width: 75%;
-    background: var(--white-g);
-    box-shadow: var(--shadow-border-blk);
+    background: var(--bg-a);
+    box-shadow: var(--border-b);
     border-radius: 20px;
 }
 
@@ -100,12 +102,12 @@ header > a#signin {
     border-radius: 10px;
     font-size: 14px;
     font-weight: 500;
-    box-shadow: var(--shadow-border-acc);
+    box-shadow: var(--border-a);
     transition: background .2s;
 }
 
 header > a#signin:hover {
-    background: var(--blu-drk);
+    background: var(--blu-a);
 }
 
 /* People */
@@ -116,8 +118,8 @@ header > a#signin:hover {
     align-items: center;
     width: 100%;
     height: 60px;
-    background: white;
-    box-shadow: var(--shadow-border-gry);
+    background: var(--bg);
+    box-shadow: var(--border-g);
     border-radius: 7.8px;
     padding: 10px;
     margin-bottom: 10px;
@@ -126,7 +128,7 @@ header > a#signin:hover {
 }
 
 #people > .user:hover, #people > .user.selected {
-    box-shadow: var(--shadow-border-blk);
+    box-shadow: var(--border-b);
 }
 
 #people > .user > img {
@@ -168,9 +170,9 @@ header > a#signin:hover {
     align-items: center;
     padding: 10px 20px 10px 20px;
     height: 45px;
-    background: white;
+    background: var(--bg);
     border-radius: 20px 20px 0 0;
-    box-shadow: var(--shadow-border-blk);
+    box-shadow: var(--border-b);
 }
 
 #chat > #info i {
@@ -189,6 +191,9 @@ header > a#signin:hover {
 #chat > #info > button.rm {
     justify-self: end;
     margin-left: auto;
+}
+
+#chat > #info > button.rm > i {
     color: var(--red);
 }
 
@@ -217,12 +222,12 @@ header > a#signin:hover {
     color: white;
     margin-left: auto;
     background: var(--blu);
-    box-shadow: var(--shadow-border-acc);
+    box-shadow: var(--border-a);
 }
 
 #chat > #bubbles > .bubble-outter.server > .bubble-inner {
-    background: white;
-    box-shadow: var(--shadow-border-blk);
+    background: var(--bg-g);
+    box-shadow: var(--border-b);
 }
 
 #chat > #input-outter {
@@ -241,8 +246,8 @@ header > a#signin:hover {
 #chat > #input-outter > #input-inner {
     display: flex;
     align-items: center;
-    background: white;
-    box-shadow: var(--shadow-border-blk);
+    background: var(--bg-i);
+    box-shadow: var(--border-b);
     padding: 5px;
     width: 55%;
     height: 100%;
@@ -265,7 +270,6 @@ header > a#signin:hover {
 }
 
 #chat > #input-outter > #input-inner > button {
-    color: white;
     background: var(--blu);
     padding: 0;
     width: 31px;
@@ -277,6 +281,10 @@ header > a#signin:hover {
     transition: background .15s;
 }
 
+#chat > #input-outter > #input-inner > button > i {
+    color: white;
+}
+
 #chat > #input-outter > #input-inner > button:hover {
-    background: var(--blu-drk);
+    background: var(--blu-a);
 }
