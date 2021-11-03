@@ -1,10 +1,20 @@
 :root {
-    --accent: #0a84e1;
-    --accent-d: #006ee1;
-    
     --white-g: #fafbfc;
 
     --shadow-border-blk: inset #00000026 0 0 0 1px;
     --shadow-border-gry: inset #eff3f4 0 0 0 1px;
     --shadow-border-acc: #0a84e199 0 0 3px 0;
+
+    --red: #ff3b30;
+    --orn: #ff9500;
+    --ylw: #ffcc00;
+    --grn: #34c759;
+    --mnt: #00c7be;
+    --tel: #30b0c7;
+    --cyn: #32ade6;
+    --blu: #007aff;
+    --idg: #5856d6;
+    --prp: #af52de;
+    --pnk: #ff2d55;
+    --bwn: #a2845e;
 }
