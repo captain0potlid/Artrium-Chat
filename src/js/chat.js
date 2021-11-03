@@ -1,38 +1,80 @@
+"use strict"
 const socket = io();
 
-const bubbles = document.querySelector('#chat > #bubbles');
-const chatInput = document.querySelector('#chat > #input-outter > #input-inner > textarea');
-const sendButton = document.querySelector('#chat > #input-outter > #input-inner > button');
+const nickname = document.querySelector("#nickname");
+const chatList = document.querySelector(".chatting-list");
+const chatInput = document.querySelector(".chatting-input");
+const sendButton = document.querySelector(".send-button");
 
-function addBubble(msg) {
-    const container = document.createElement('div');
-    const content = document.createElement('div');
+function createElement(str) {
+    const frag = document.createDocumentFragment();
 
-    container.classList.add('bubble-outter');
-    container.classList.add('self');
-    content.classList.add('bubble-inner');
-    content.innerText = msg;
+    const elem = document.createElement('div');
+    elem.innerHTML = str;
 
-    container.appendChild(content);
+    while (elem.childNodes[0]) {
+        frag.appendChild(elem.childNodes[0]);
+    }
 
-    return container;
+    return frag;
 }
 
-function sendBubble(e) {
-    if (e.keyCode && !e.keyCode === 13) { return; }
+function getDate() {
+    const d = new Date();
+    const ww = d.getHours() + ":"+  d.getMinutes();
+    return ww;
+}
+// for @captain0potlid to connect date display....or something associated withn
 
-    const data = {
-        from: 'self', // dummy
-        to: 'server', // dummy
+chatInput.addEventListener("keypress", (event)=>{
+    if(event.keyCode === 13) {
+        alert(getDate() + ' - 해당 기능은 아직 개발중인 기능입니다!')
+    }
+})
+
+sendButton.addEventListener("click", () => {
+    var myDiv = document.getElementById("chat");
+    myDiv.scrollTop = myDiv.scrollHeight;
+
+    const param = {
+        name: nickname.value,
         msg: chatInput.value
     }
 
-    socket.emit('chat', data); // send data to server
-}
+    socket.emit("chatting", param)
 
-chatInput.addEventListener('keypress', sendBubble);
-sendButton.addEventListener('click', sendBubble);
+})
 
-socket.on('chat', (data) => {
+socket.on("chatting", (data) => {
     
-});
+    if(data.name != nickname.value) {
+        const name = data.name;
+        const msg = data.msg;
+
+        const html = `
+        <div id="msgContainer">    
+        <div class="chat-inner" id="DATE">
+            ${name}님께서 입력하신 메세지 : ${msg}
+        </div><br>
+        </div>
+        `
+
+        let fragment = createElement(html)
+        chatList.appendChild(fragment)
+
+        return;
+    }
+
+    const name = data.name;
+    const msg = data.msg;
+
+    const html = `
+    <div id="msgContainer">    
+    <div class="chat-outter" id="null">
+    ${name}님 - ${msg}
+    </div><br></div>
+    `
+
+    let fragment = createElement(html)
+    chatList.appendChild(fragment)
+})
